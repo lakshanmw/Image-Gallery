@@ -47,10 +47,11 @@ public class SharedPreference {
         saveFavorites(context, favorites);
     }
 
-    public void removeFavorite(Context context, FavoriteImageModel product) {
+    public void removeFavorite(Context context, FavoriteImageModel obj) {
         ArrayList<FavoriteImageModel> favorites = getFavorites(context);
         if (favorites != null) {
-            favorites.remove(product);
+            System.out.println("check remove");
+            favorites.remove(obj);
             saveFavorites(context, favorites);
         }
     }

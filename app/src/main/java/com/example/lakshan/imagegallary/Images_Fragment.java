@@ -70,15 +70,10 @@ public class Images_Fragment extends Fragment {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-//                        Bundle bundle = new Bundle();
-                       // Bundle f=new Bundle();
-//                        bundle.putString("event",  copy.get(position).getStrDrinkThumb());
                         Intent i = new Intent(getActivity(), onImageClickActivity.class);
-                        // Pass image index
                         i.putExtra("id", position);
                         Singleton.getInstance().doSomething(copy.get(position).getStrDrinkThumb());
                         i.putExtra("img_url", copy.get(position).getStrDrinkThumb());
-                     //   i.setArguments(bundle);
                         System.out.println("img_url inside onitemclick :"+copy.get(position).getStrDrinkThumb());
                         startActivity(i);
                     }

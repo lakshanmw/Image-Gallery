@@ -55,7 +55,8 @@ public class FavoritImageGridAdapter extends BaseAdapter {
         imageView = (ImageView) itemView.findViewById(R.id.fav_img);
         description_tv= (TextView) itemView.findViewById(R.id.description_tv);
 
-        description_tv.setText(favorites.get(position).description);
+        description_tv.setText("Description : "+favorites.get(position).description);
+        description_tv.setTextSize(18);
         System.out.println(favorites.get(position).description);
         description_tv.setTextColor(Color.parseColor("#008000"));
         Picasso.with(mcontext).load(favorites.get(position).img_url).into(imageView);
